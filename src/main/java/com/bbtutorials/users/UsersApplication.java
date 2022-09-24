@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan({"com.bbtutorials.users","com.womenhostel.users","com.womenhostel.users.repository"})
+@ComponentScan({"com.bbtutorials.users","com.corvanta.hostel"})
 public class UsersApplication {
 
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.womenhostel.users.entity;
+package com.corvanta.hostel.entity;
 
 
 import javax.persistence.Column;
@@ -31,7 +31,7 @@ public class Hostellers {
     
     @Column
     @NotNull(message="{NotNull.Hosteller.DateOfBirth}")
-    private long dateofbirth;
+    private String dateofbirth;
     
     @Column
     @NotNull(message="{NotNull.Hosteller.AddressForCommunication}")
@@ -49,7 +49,6 @@ public class Hostellers {
     @NotNull(message="{NotNull.Hosteller.ParentContactNumber}")
     private long parentcontactnumber; 
 
-    
     @Column
     @NotNull(message="{NotNull.Hosteller.GuardianName}")
     private String guardianname;
@@ -80,6 +79,6 @@ public class Hostellers {
     
     @Column
     @NotNull(message="{NotNull.Hosteller.DateOfJoining}")
-    private long dateofjoining;
+    private String dateofjoining;
     
 }

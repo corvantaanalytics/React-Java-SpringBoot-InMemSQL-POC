@@ -1,4 +1,4 @@
-package com.bbtutorials.users.controller;
+package com.corvanta.hostel.controller;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.womenhostel.users.entity.Hostellers;
-import com.womenhostel.users.links.HostellerLinks;
-import com.womenhostel.users.service.HostellersService;
+import com.corvanta.hostel.entity.Hostellers;
+import com.corvanta.hostel.links.HostellerLinks;
+import com.corvanta.hostel.service.HostellersService;
 
 import lombok.extern.slf4j.Slf4j;
 

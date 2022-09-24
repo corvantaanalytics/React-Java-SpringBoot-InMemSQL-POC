@@ -1,11 +1,11 @@
-package com.womenhostel.users.service;
+package com.corvanta.hostel.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import com.womenhostel.users.entity.Hostellers;
-import com.womenhostel.users.repository.HostellersRepository;
+import com.corvanta.hostel.entity.Hostellers;
+import com.corvanta.hostel.repository.HostellersRepository;
 
 @Component
 public class HostellersService {

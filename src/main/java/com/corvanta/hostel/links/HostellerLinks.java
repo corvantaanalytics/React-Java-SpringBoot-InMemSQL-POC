@@ -1,4 +1,4 @@
-package com.womenhostel.users.links;
+package com.corvanta.hostel.links;
 
 import org.springframework.stereotype.Component;
 
