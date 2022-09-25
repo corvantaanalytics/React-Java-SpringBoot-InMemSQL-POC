@@ -27,4 +27,9 @@ public class HostellerService {
 	public Hosteller getHosteller(int hostellerId) {
 		return hostellerRepository.findById(hostellerId).get();
 	}
+	public Hosteller updateHosteller(int hostellerId) {
+		 return hostellerRepository.findById(hostellerId);
+		 
+	}
 }
+
