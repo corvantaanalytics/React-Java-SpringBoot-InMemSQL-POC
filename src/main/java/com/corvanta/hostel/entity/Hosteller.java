@@ -80,3 +80,5 @@ public class Hosteller {
 	private String dateofjoining;
 
 }
+
+

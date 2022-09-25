@@ -20,16 +20,16 @@ public class HostellerService {
 		return hostellerRepository.findAll();
 	}
 
-	public Hosteller saveHosteller(Hosteller hostellers) {
-		return hostellerRepository.save(hostellers);
+	public Hosteller saveHosteller(Hosteller hosteller) {
+		return hostellerRepository.save(hosteller);
 	}
 
 	public Hosteller getHosteller(int hostellerId) {
 		return hostellerRepository.findById(hostellerId).get();
 	}
-	public Hosteller updateHosteller(int hostellerId) {
-		 return hostellerRepository.findById(hostellerId);
-		 
+
+	public Hosteller updateHosteller(int hostellerId, Hosteller hosteller) {
+		return hostellerRepository.save(hosteller);
 	}
 }
 

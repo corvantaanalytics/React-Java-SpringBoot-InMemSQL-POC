@@ -34,9 +34,9 @@ public class HostellerController {
 	}
 
 	@PostMapping(path = HostellerLinks.ADD_HOSTELLER)
-	public ResponseEntity<?> saveHosteller(@RequestBody Hosteller Hosteller) {
+	public ResponseEntity<?> saveHosteller(@RequestBody Hosteller hosteller) {
 		log.info("HostellersController:  list hostellers");
-		Hosteller resource = hostellersService.saveHosteller(Hosteller);
+		Hosteller resource = hostellersService.saveHosteller(hosteller);
 		return ResponseEntity.ok(resource);
 	}
 
@@ -48,9 +48,10 @@ public class HostellerController {
 	}
 
 	@PutMapping(path = HostellerLinks.UPDATE_HOSTELLER)
-	public ResponseEntity<?> updateHosteller(@PathVariable int hostellerId, @RequestBody Hosteller HostellerDetails) {
+	public ResponseEntity<?> updateHosteller(@PathVariable("id") int hostellerId, @RequestBody Hosteller hostellerDetails) {
 		log.info("HostellersController: updateHosteller :: " + hostellerId);
-		Hosteller resource = hostellersService.updateHosteller(hostellerId);
+		Hosteller resource = hostellersService.updateHosteller(hostellerId, hostellerDetails);
 		return ResponseEntity.ok(resource);
 	}
+	
 }
