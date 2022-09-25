@@ -53,4 +53,5 @@ public class HostellerController {
 		Hosteller resource = hostellersService.updateHosteller(hostellerId, hostellerDetails);
 		return ResponseEntity.ok(resource);
 	}
+	
 }

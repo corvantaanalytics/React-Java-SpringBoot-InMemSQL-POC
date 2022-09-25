@@ -32,3 +32,4 @@ public class HostellerService {
 		return hostellerRepository.save(hosteller);
 	}
 }
+
