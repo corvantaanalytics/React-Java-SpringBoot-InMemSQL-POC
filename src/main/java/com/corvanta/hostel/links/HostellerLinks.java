@@ -13,10 +13,15 @@ public class HostellerLinks {
 	public static final String ADD_ROOMDETAILS = "/roomDetail";
 	public static final String GET_ROOMDETAILS = "/roomDetail/{id}";
 	public static final String UPDATE_ROOMDETAILS = "/roomDetail/{id}";
-	public static final String LIST_REQUESTS = "/roomrequests";
-	public static final String ADD_REQUEST = "/roomrequest";
-	public static final String GET_REQUEST = "/roomrequest/{id}";
-	public static final String UPDATE_REQUEST = "/roomrequest/{id}";
+	public static final String LIST_REQUESTS = "/servicerequests";
+	public static final String ADD_REQUEST = "/servicerequest";
+	public static final String GET_REQUEST = "/servicerequest/{id}";
+	public static final String UPDATE_REQUEST = "/servicerequest/{id}";
+	public static final String LIST_FEEDBACKS = "/feedbacks";
+	public static final String ADD_FEEDBACK = "/feedback";
+	public static final String GET_FEEDBACK = "/feedback/{id}";
+	public static final String UPDATE_FEEDBACK = "/feedback/{id}";
+	
 
 
 }

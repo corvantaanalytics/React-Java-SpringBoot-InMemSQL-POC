@@ -15,7 +15,7 @@ public class HostellerService {
 	public HostellerService(HostellerRepository hostellerRepository) {
 		this.hostellerRepository = hostellerRepository;
 	}
-
+	
 	public List<Hosteller> getHostellers() {
 		return hostellerRepository.findAll();
 	}

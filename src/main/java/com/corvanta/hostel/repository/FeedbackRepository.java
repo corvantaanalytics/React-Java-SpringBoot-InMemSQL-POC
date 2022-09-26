@@ -5,9 +5,10 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-import com.corvanta.hostel.entity.RoomRequest;
+import com.corvanta.hostel.entity.Feedback;
+import com.corvanta.hostel.entity.RoomDetail;
 
 @RepositoryRestResource()
-public interface RoomRequestRepository extends JpaRepository<RoomRequest, Integer>,
-		JpaSpecificationExecutor<RoomRequest>, QuerydslPredicateExecutor<RoomRequest> {
+public interface FeedbackRepository extends JpaRepository<Feedback, Integer>, JpaSpecificationExecutor<Feedback>,
+		QuerydslPredicateExecutor<Feedback> {
 }
