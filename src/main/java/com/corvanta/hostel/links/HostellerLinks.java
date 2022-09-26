@@ -17,6 +17,11 @@ public class HostellerLinks {
 	public static final String ADD_REQUEST = "/roomrequest";
 	public static final String GET_REQUEST = "/roomrequest/{id}";
 	public static final String UPDATE_REQUEST = "/roomrequest/{id}";
+	public static final String LIST_FEEDBACKS = "/feedbacks";
+	public static final String ADD_FEEDBACK = "/feedback";
+	public static final String GET_FEEDBACK = "/feedback/{id}";
+	public static final String UPDATE_FEEDBACK = "/feedback/{id}";
+	
 
 
 }

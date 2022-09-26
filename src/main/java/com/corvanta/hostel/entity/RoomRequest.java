@@ -18,28 +18,28 @@ public class RoomRequest {
 	private int id;
 
 	@Column
-	@NotNull(message = "{NotNull.RoomCleaning.name}")
+	@NotNull(message = "{NotNull.RoomRequest.name}")
 	private String name;
 
 	@Column
-	@NotNull(message = "{NotNull.RoomCleaning.roomDetails}")
+	@NotNull(message = "{NotNull.RoomRequest.roomDetails}")
 	private String roomDetails;
 
 	@Column
-	@NotNull(message = "{NotNull.RoomCleaning.dateOfRequest}")
+	@NotNull(message = "{NotNull.RoomRequest.dateOfRequest}")
 	private Date dateOfRequest;
 	
 
 	@Column
-	@NotNull(message = "{NotNull.RoomCleaning.dateOfCompletion}")
+	@NotNull(message = "{NotNull.RoomRequest.dateOfCompletion}")
 	private Date dateOfCompletion;
 
 	@Column
-	@NotNull(message = "{NotNull.RoomCleaning.Status}")
+	@NotNull(message = "{NotNull.RoomRequest.Status}")
 	private String status;
 
 	@Column
-	@NotNull(message = "{NotNull.RoomCleaning.UpdateRequest}")
+	@NotNull(message = "{NotNull.RoomRequest.UpdateRequest}")
 	private String updateRequest;
 
 }
