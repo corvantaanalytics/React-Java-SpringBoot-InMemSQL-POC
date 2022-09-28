@@ -5,9 +5,9 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-import com.corvanta.hostel.entity.Feedback;
+import com.corvanta.hostel.entity.UserProfile;
 
 @RepositoryRestResource()
-public interface FeedbackRepository extends JpaRepository<Feedback, Integer>, JpaSpecificationExecutor<Feedback>,
-		QuerydslPredicateExecutor<Feedback> {
+public interface UserProfileRepository extends JpaRepository<UserProfile, Integer>,
+		JpaSpecificationExecutor<UserProfile>, QuerydslPredicateExecutor<UserProfile> {
 }

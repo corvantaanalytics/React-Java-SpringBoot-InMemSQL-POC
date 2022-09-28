@@ -21,7 +21,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RestController
 @RequestMapping("/api/v1/")
-public class ServiceRequestController {
+public class UserProfileController {
 
 	@Autowired
 	ServiceRequestService serviceRequestController;
@@ -55,3 +55,4 @@ public class ServiceRequestController {
 	}
 
 }
+

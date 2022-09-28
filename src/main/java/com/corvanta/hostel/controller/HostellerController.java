@@ -48,10 +48,11 @@ public class HostellerController {
 	}
 
 	@PutMapping(path = HostellerLinks.UPDATE_HOSTELLER)
-	public ResponseEntity<?> updateHosteller(@PathVariable("id") int hostellerId, @RequestBody Hosteller hostellerDetails) {
+	public ResponseEntity<?> updateHosteller(@PathVariable("id") int hostellerId,
+			@RequestBody Hosteller hostellerDetails) {
 		log.info("HostellersController: updateHosteller :: " + hostellerId);
 		Hosteller resource = hostellersService.updateHosteller(hostellerId, hostellerDetails);
 		return ResponseEntity.ok(resource);
 	}
-	
+
 }

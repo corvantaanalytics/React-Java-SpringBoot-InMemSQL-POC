@@ -21,7 +21,8 @@ public class HostellerLinks {
 	public static final String ADD_FEEDBACK = "/feedback";
 	public static final String GET_FEEDBACK = "/feedback/{id}";
 	public static final String UPDATE_FEEDBACK = "/feedback/{id}";
-	
-
+	public static final String ADD_PROFILE = "/addprofile";
+	public static final String GET_PROFILE = "/addprofile";
+	public static final String UPDATE_PROFILE = "/addprofile";
 
 }
