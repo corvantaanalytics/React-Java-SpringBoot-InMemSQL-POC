@@ -24,5 +24,9 @@ public class HostellerLinks {
 	public static final String ADD_PROFILE = "/addprofile";
 	public static final String GET_PROFILE = "/addprofile";
 	public static final String UPDATE_PROFILE = "/addprofile";
+	public static final String LIST_LOCATIONS = "/locations";
+	public static final String ADD_LOCATION = "/location";
+	public static final String GET_LOCATION = "/location/{id}";
+	public static final String UPDATE_LOCATION = "/location/{id}";
 
 }
