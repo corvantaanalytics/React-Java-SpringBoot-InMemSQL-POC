@@ -28,5 +28,9 @@ public class HostellerLinks {
 	public static final String ADD_LOCATION = "/location";
 	public static final String GET_LOCATION = "/location/{id}";
 	public static final String UPDATE_LOCATION = "/location/{id}";
+	public static final String LIST_SERVICEAPARTMENTS = "/apartments";
+	public static final String ADD_SERVICEAPARTMENT = "/apartment";
+	public static final String GET_SERVICEAPARTMENTS = "/apartments/{id}";
+	public static final String UPDATE_SERVICEAPARTMENTS = "/apartment/{id}";
 
 }
