@@ -29,6 +29,7 @@ public class HostellerService {
 	}
 
 	public Hosteller updateHosteller(int hostellerId, Hosteller hosteller) {
+		hosteller.setId(hostellerId);
 		return hostellerRepository.save(hosteller);
 	}
 }

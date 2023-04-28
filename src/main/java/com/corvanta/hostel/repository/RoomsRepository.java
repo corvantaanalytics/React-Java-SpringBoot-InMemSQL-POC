@@ -7,12 +7,12 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-import com.corvanta.hostel.entity.ServiceApartments;
+import com.corvanta.hostel.entity.Rooms;
 
 @RepositoryRestResource()
-public interface ServiceApartmentsRepository extends JpaRepository<ServiceApartments, Integer>, JpaSpecificationExecutor<ServiceApartments>,
-		QuerydslPredicateExecutor<ServiceApartments> {
+public interface RoomsRepository extends JpaRepository<Rooms, Integer>, JpaSpecificationExecutor<Rooms>,
+		QuerydslPredicateExecutor<Rooms> {
 
-	List<ServiceApartments> findByLocationId(int location_Id);
-	
+	List<Rooms> findByLocationIdAndServiceApartmentId(int locationId,int serviceApartmentId);
+
 }

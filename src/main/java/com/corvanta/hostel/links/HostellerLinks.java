@@ -30,7 +30,11 @@ public class HostellerLinks {
 	public static final String UPDATE_LOCATION = "/location/{id}";
 	public static final String LIST_SERVICEAPARTMENTS = "/apartments";
 	public static final String ADD_SERVICEAPARTMENT = "/apartment";
-	public static final String GET_SERVICEAPARTMENTS = "/apartments/{id}";
+	public static final String GET_SERVICEAPARTMENTS = "/apartments/{locationId}";
 	public static final String UPDATE_SERVICEAPARTMENTS = "/apartment/{id}";
+	public static final String LIST_ROOMS = "/rooms";
+	public static final String ADD_ROOM = "/room";
+	public static final String GET_ROOM = "/room/{locationId}/{serviceApartmentId}";
+	public static final String UPDATE_ROOM = "/room/{id}";
 
 }

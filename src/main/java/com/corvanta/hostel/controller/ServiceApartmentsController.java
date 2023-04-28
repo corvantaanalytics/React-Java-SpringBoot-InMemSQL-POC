@@ -20,7 +20,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RestController
-@RequestMapping("/api/v1/")
+@RequestMapping("/api/v1/")                                                                                    
 public class ServiceApartmentsController {
 
 	@Autowired
@@ -43,14 +43,14 @@ public class ServiceApartmentsController {
 	@GetMapping(path = HostellerLinks.GET_SERVICEAPARTMENTS)
 	public ResponseEntity<?> getServieApartments(@PathVariable("locationId") int location_Id) {
 		log.info("ServiceApartmentsController:  getServiceApartments :: " + location_Id);
-		ServiceApartments resource = serviceApartmentsService.getServiceApartments(location_Id);
+		List<ServiceApartments> resource = serviceApartmentsService.getServiceApartments(location_Id);
 		return ResponseEntity.ok(resource);
 	}
 
 	@PutMapping(path = HostellerLinks.UPDATE_SERVICEAPARTMENTS)
-	public ResponseEntity<?> updateServieApartment(@PathVariable("id") int location_Id, @RequestBody ServiceApartments serviceApartments) {
-		log.info("ServiceApartmentsController: updateServiceApartment:: " + location_Id);
-		ServiceApartments resource = serviceApartmentsService.updateServiceApartment(location_Id, serviceApartments);
+	public ResponseEntity<?> updateServieApartment(@PathVariable("id") int id, @RequestBody ServiceApartments serviceApartments) {
+		log.info("ServiceApartmentsController: updateServiceApartment:: " + id);
+		ServiceApartments resource = serviceApartmentsService.updateServiceApartment(id, serviceApartments);
 		return ResponseEntity.ok(resource);
 	}
 
