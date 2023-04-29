@@ -29,6 +29,7 @@ public class ServiceRequestService {
 	}
 
 	public ServiceRequest updateServiceRequest(int roomId, ServiceRequest serviceRequest) {
+		serviceRequest.setId(roomId);
 		return serviceRequestRepository.save(serviceRequest);
 	}
 }

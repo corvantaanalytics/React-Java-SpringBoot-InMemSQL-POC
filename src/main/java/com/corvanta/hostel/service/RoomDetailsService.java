@@ -29,6 +29,7 @@ public class RoomDetailsService {
 	}
 
 	public RoomDetail updateRoomDetails(int roomId, RoomDetail roomDetail) {
+		roomDetail.setId(roomId);
 		return roomDetailsRepository.save(roomDetail);
 	}
 }

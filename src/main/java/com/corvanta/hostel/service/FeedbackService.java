@@ -29,6 +29,7 @@ public class FeedbackService {
 	}
 
 	public Feedback updateFeedback(int roomId, Feedback feedback) {
+		feedback.setId(roomId);
 		return feedbackRepository.save(feedback);
 	}
 }

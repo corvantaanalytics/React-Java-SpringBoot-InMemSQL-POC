@@ -24,11 +24,12 @@ public class ServiceApartmentsService {
 		return serviceApartmentsRepository.save(serviceApartments);
 	}
 
-	public ServiceApartments getServiceApartments(int location_Id) {
-		return serviceApartmentsRepository.findById(location_Id).get();
+	public List<ServiceApartments> getServiceApartments(int location_Id) {
+		return serviceApartmentsRepository.findByLocationId(location_Id);
 	}
 
-	public ServiceApartments updateServiceApartment(int location_Id, ServiceApartments serviceApartments) {
+	public ServiceApartments updateServiceApartment(int id, ServiceApartments serviceApartments) {
+		serviceApartments.setId(id);
 		return serviceApartmentsRepository.save(serviceApartments);
 	}
 	
