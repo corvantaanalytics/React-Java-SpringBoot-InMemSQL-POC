@@ -40,5 +40,10 @@ public class HostellerLinks {
 	public static final String ADD_EXPENSETYPE = "/expenseType";
 	public static final String GET_EXPENSETYPE = "/expenseType/{id}";
 	public static final String UPDATE_EXPENSETYPE = "/expenseType/{id}";
+	public static final String ADD_USEREXPENSE = "/userExpenses";
+	public static final String GET_USEREXPENSEBYLOCATION = "/userExpenses/location/{locationId}";
+	public static final String GET_USEREXPENSEBYAPARTMENT = "/userExpenses/serviceApartment/{serviceApartmentId}";
+	public static final String GET_USEREXPENSEBYROOM = "/userExpenses/room/{roomId}";
+	public static final String GET_USEREXPENSEBYEXPENSE = "/userExpenses/expense/{expenseId}";
 
 }
