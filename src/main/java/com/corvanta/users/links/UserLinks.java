@@ -1,4 +1,4 @@
-package com.bbtutorials.users.links;
+package com.corvanta.users.links;
 
 import org.springframework.stereotype.Component;
 

@@ -36,5 +36,9 @@ public class HostellerLinks {
 	public static final String ADD_ROOM = "/room";
 	public static final String GET_ROOM = "/room/{locationId}/{serviceApartmentId}";
 	public static final String UPDATE_ROOM = "/room/{id}";
+	public static final String LIST_EXPENSETYPES = "/expenseTypes";
+	public static final String ADD_EXPENSETYPE = "/expenseType";
+	public static final String GET_EXPENSETYPE = "/expenseType/{id}";
+	public static final String UPDATE_EXPENSETYPE = "/expenseType/{id}";
 
 }

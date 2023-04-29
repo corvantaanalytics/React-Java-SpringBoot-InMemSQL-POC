@@ -1,11 +1,11 @@
-package com.bbtutorials.users;
+package com.corvanta.users;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan({"com.bbtutorials.users","com.corvanta.hostel"})
+@ComponentScan({"com.corvanta.users","com.corvanta.hostel"})
 public class UsersApplication {
 
 	public static void main(String[] args) {

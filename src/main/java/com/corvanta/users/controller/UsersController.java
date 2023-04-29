@@ -1,4 +1,4 @@
-package com.bbtutorials.users.controller;
+package com.corvanta.users.controller;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bbtutorials.users.entity.Users;
-import com.bbtutorials.users.links.UserLinks;
-import com.bbtutorials.users.service.UsersService;
+import com.corvanta.users.entity.Users;
+import com.corvanta.users.links.UserLinks;
+import com.corvanta.users.service.UsersService;
 
 import lombok.extern.slf4j.Slf4j;
 

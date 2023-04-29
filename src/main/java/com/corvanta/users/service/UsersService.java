@@ -1,11 +1,11 @@
-package com.bbtutorials.users.service;
+package com.corvanta.users.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import com.bbtutorials.users.entity.Users;
-import com.bbtutorials.users.repository.UsersRepository;
+import com.corvanta.users.entity.Users;
+import com.corvanta.users.repository.UsersRepository;
 
 @Component
 public class UsersService {
