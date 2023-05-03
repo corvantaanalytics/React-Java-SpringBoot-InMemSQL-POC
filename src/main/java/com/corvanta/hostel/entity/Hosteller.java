@@ -48,21 +48,21 @@ public class Hosteller {
 	private long parentcontactnumber;
 
 	@Column
-	@NotNull(message = "{NotNull.Hosteller.GuardianName}")
-	private String guardianname;
-
-	@Column
-	@NotNull(message = "{NotNull.Hosteller.GuardianContactNumber}")
-	private long guardiancontactnumber;
-
-	@Column
 	@NotNull(message = "{NotNull.Hosteller.WorkplaceInformation}")
 	private String workplaceinformation;
 
 	@Column
 	@NotNull(message = "{NotNull.Hosteller.WorplacePhoneNumber}")
 	private long workplacephonenumber;
+	
+	@Column
+	@NotNull(message = "{NotNull.Hosteller.RoomDetails}")
+	private int locationId;
 
+	@Column
+	@NotNull(message = "{NotNull.Hosteller.RoomDetails}")
+	private int serviceApartmentId;
+	
 	@Column
 	@NotNull(message = "{NotNull.Hosteller.RoomDetails}")
 	private String roomdetails;
