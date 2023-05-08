@@ -24,8 +24,12 @@ public class RoomsService {
 		return roomsRepository.save(rooms);
 	}
 
-	public List<Rooms> getRoom(int locationId,int serviceApartmentId) {
+	public List<Rooms> getRoomByLocationAndApartmentId(int locationId,int serviceApartmentId) {
 		return roomsRepository.findByLocationIdAndServiceApartmentId(locationId,serviceApartmentId);
+	}
+	
+	public Rooms getRoomById(int id) {
+		return roomsRepository.findById(id).get();
 	}
 
 	public Rooms updateRoom(int id, Rooms rooms) {

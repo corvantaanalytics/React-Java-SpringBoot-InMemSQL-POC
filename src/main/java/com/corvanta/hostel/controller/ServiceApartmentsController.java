@@ -40,10 +40,17 @@ public class ServiceApartmentsController {
 		return ResponseEntity.ok(resource);
 	}
 
-	@GetMapping(path = HostellerLinks.GET_SERVICEAPARTMENTS)
-	public ResponseEntity<?> getServieApartments(@PathVariable("locationId") int location_Id) {
-		log.info("ServiceApartmentsController:  getServiceApartments :: " + location_Id);
-		List<ServiceApartments> resource = serviceApartmentsService.getServiceApartments(location_Id);
+	@GetMapping(path = HostellerLinks.GET_SERVICEAPARTMENTSBYLOCATIONID)
+	public ResponseEntity<?> getServieApartmentsByLocationId(@PathVariable("locationId") int location_Id) {
+		log.info("ServiceApartmentsController:  getServiceApartmentsByLocationId :: " + location_Id);
+		List<ServiceApartments> resource = serviceApartmentsService.getServiceApartmentsByLocationId(location_Id);
+		return ResponseEntity.ok(resource);
+	}
+	
+	@GetMapping(path = HostellerLinks.GET_SERVICEAPARTMENTSBYID)
+	public ResponseEntity<?> getServieApartmentsById(@PathVariable("id") int id) {
+		log.info("ServiceApartmentsController:  getServiceApartmentsById :: " + id);
+		ServiceApartments resource = serviceApartmentsService.getServiceApartmentsById(id);
 		return ResponseEntity.ok(resource);
 	}
 

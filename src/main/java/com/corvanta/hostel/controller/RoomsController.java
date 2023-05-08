@@ -40,12 +40,21 @@ public class RoomsController {
 		return ResponseEntity.ok(resource);
 	}
 
-	@GetMapping(path = HostellerLinks.GET_ROOM)
-	public ResponseEntity<?> getRoom(@PathVariable("locationId") int locationId, @PathVariable("serviceApartmentId") int serviceApartmentId ) {
-		log.info("RoomsController:  getRoom :: " + locationId,serviceApartmentId);
-		List<Rooms> resource = roomsService.getRoom(locationId,serviceApartmentId);
+	@GetMapping(path = HostellerLinks.GET_ROOMBYID)
+	public ResponseEntity<?> getRoomById(@PathVariable("id") int id ) {
+		log.info("RoomsController:  getRoom :: " + id);
+		Rooms resource = roomsService.getRoomById(id);
 		return ResponseEntity.ok(resource);
 	}
+	
+
+	@GetMapping(path = HostellerLinks.GET_ROOMBYFILTERS)
+	public ResponseEntity<?> getRoomByFilters(@PathVariable("locationId") int locationId, @PathVariable("serviceApartmentId") int serviceApartmentId ) {
+		log.info("RoomsController:  getRoom :: " + locationId,serviceApartmentId);
+		List<Rooms> resource = roomsService.getRoomByLocationAndApartmentId(locationId,serviceApartmentId);
+		return ResponseEntity.ok(resource);
+	}
+
 
 	@PutMapping(path = HostellerLinks.UPDATE_ROOM)
 	public ResponseEntity<?> updateRoom(@PathVariable("id") int id, @RequestBody Rooms rooms) {
