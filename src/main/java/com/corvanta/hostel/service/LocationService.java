@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
+import com.corvanta.hostel.entity.Hosteller;
 import com.corvanta.hostel.entity.Location;
 import com.corvanta.hostel.repository.LocationRepository;
 
@@ -31,6 +32,10 @@ public class LocationService {
 	public Location updateLocation(int locationId, Location location) {
 		location.setId(locationId);
 		return locationRepository.save(location);
+	}
+	
+	public Location deleteLocation(int id) {
+		return locationRepository.deleteById(id);
 	}
 }
 

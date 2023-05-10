@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.corvanta.hostel.entity.Feedback;
+import com.corvanta.hostel.entity.Hosteller;
 import com.corvanta.hostel.links.HostellerLinks;
 import com.corvanta.hostel.service.FeedbackService;
 
@@ -53,5 +55,12 @@ public class FeedbackController {
 		Feedback resource = feedbackService.updateFeedback(roomId, feedback);
 		return ResponseEntity.ok(resource);
 	}
-
+	
+	@DeleteMapping(path = HostellerLinks.DELETE_FEEDBACK)
+	public ResponseEntity<?> deleteFeedback(@PathVariable("id") int id) {
+		log.info("FeedbackController: deleteFeedback :: " + id);
+		Feedback resource = feedbackService.deleteFeedback(id);
+		return ResponseEntity.ok(resource);
+	
+	}
 }

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
+import com.corvanta.hostel.entity.Hosteller;
 import com.corvanta.hostel.entity.ServiceApartments;
 import com.corvanta.hostel.repository.ServiceApartmentsRepository;
 
@@ -37,6 +38,9 @@ public class ServiceApartmentsService {
 		return serviceApartmentsRepository.save(serviceApartments);
 	}
 	
+	public ServiceApartments deleteServiceApartment(int id) {
+		return serviceApartmentsRepository.deleteById(id);
+	}	
 }
 
 

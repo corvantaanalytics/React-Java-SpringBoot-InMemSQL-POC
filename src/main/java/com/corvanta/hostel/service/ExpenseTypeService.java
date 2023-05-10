@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 
 import com.corvanta.hostel.entity.ExpenseType;
+import com.corvanta.hostel.entity.Hosteller;
 import com.corvanta.hostel.repository.ExpenseTypeRepository;
 
 @Component
@@ -31,5 +32,9 @@ public class ExpenseTypeService {
 	public ExpenseType updateExpenseType(int id, ExpenseType expenseType) {
 		expenseType.setId(id);
 		return expenseTypeRepository.save(expenseType);
+	}
+	
+	public ExpenseType deleteExpenseType(int id) {
+		return expenseTypeRepository.deleteById(id);
 	}
 }

@@ -10,4 +10,6 @@ import com.corvanta.hostel.entity.Hosteller;
 @RepositoryRestResource()
 public interface HostellerRepository extends JpaRepository<Hosteller, Integer>, JpaSpecificationExecutor<Hosteller>,
 		QuerydslPredicateExecutor<Hosteller> {
+	
+	Hosteller deleteById(int id);
 }

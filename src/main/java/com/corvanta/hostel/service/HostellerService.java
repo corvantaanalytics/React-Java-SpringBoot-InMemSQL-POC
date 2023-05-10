@@ -32,5 +32,9 @@ public class HostellerService {
 		hosteller.setId(hostellerId);
 		return hostellerRepository.save(hosteller);
 	}
+	
+	public Hosteller deleteHosteller(int hostellerId) {
+		return hostellerRepository.deleteById(hostellerId);
+	}
 }
 

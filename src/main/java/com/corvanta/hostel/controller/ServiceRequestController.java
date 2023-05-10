@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.corvanta.hostel.entity.Hosteller;
 import com.corvanta.hostel.entity.ServiceRequest;
 import com.corvanta.hostel.links.HostellerLinks;
 import com.corvanta.hostel.service.ServiceRequestService;
@@ -53,5 +55,11 @@ public class ServiceRequestController {
 		ServiceRequest resource = serviceRequestController.updateServiceRequest(roomId, serviceRequest);
 		return ResponseEntity.ok(resource);
 	}
-
+	
+	@DeleteMapping(path = HostellerLinks.DELETE_REQUEST)
+	public ResponseEntity<?> deleteServiceRequest(@PathVariable("id") int id) {
+		log.info("ServiceRequestController: deleteServiceRequest :: " + id);
+		ServiceRequest resource = serviceRequestController.deleteServiceRequest(id);
+		return ResponseEntity.ok(resource);
+	}
 }

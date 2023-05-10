@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
+import com.corvanta.hostel.entity.Hosteller;
 import com.corvanta.hostel.entity.ServiceRequest;
 import com.corvanta.hostel.repository.ServiceRequestRepository;
 
@@ -31,5 +32,9 @@ public class ServiceRequestService {
 	public ServiceRequest updateServiceRequest(int roomId, ServiceRequest serviceRequest) {
 		serviceRequest.setId(roomId);
 		return serviceRequestRepository.save(serviceRequest);
+	}
+	
+	public ServiceRequest deleteServiceRequest(int id) {
+		return serviceRequestRepository.deleteById(id);
 	}
 }
