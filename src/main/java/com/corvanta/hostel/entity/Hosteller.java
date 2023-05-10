@@ -56,19 +56,27 @@ public class Hosteller {
 	private long workplacephonenumber;
 	
 	@Column
-	@NotNull(message = "{NotNull.Hosteller.RoomDetails}")
+	@NotNull(message = "{NotNull.Hosteller.locationId}")
 	private int locationId;
+	
+	@Column
+	@NotNull(message = "{NotNull.Hosteller.location}")
+	private String location;
 
 	@Column
-	@NotNull(message = "{NotNull.Hosteller.RoomDetails}")
+	@NotNull(message = "{NotNull.Hosteller.serviceApartmentId}")
 	private int serviceApartmentId;
 	
 	@Column
-	@NotNull(message = "{NotNull.Hosteller.RoomDetails}")
+	@NotNull(message = "{NotNull.Hosteller.serviceApartment}")
+	private String serviceApartment;
+	
+	@Column
+	@NotNull(message = "{NotNull.Hosteller.roomdetails}")
 	private String roomdetails;
 
 	@Column
-	@NotNull(message = "{NotNull.Hosteller.RentDetails}")
+	@NotNull(message = "{NotNull.Hosteller.rentdetails}")
 	private String rentdetails;
 
 	@Column

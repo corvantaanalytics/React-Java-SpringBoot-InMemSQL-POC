@@ -20,6 +20,10 @@ public class ServiceApartments {
 	private int locationId;
 
 	@Column
+	@NotNull(message = "{NotNull.ServiceApartments.location}")
+	private String location;
+	
+	@Column
 	@NotNull(message = "{NotNull.ServiceApartments.name}")
 	private String name;
 

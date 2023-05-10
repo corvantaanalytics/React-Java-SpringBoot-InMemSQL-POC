@@ -18,11 +18,19 @@ public class Rooms {
 	@Column
 	@NotNull(message = "{NotNull.Rooms.locationId}")
 	private int locationId;
+	
+	@Column
+	@NotNull(message = "{NotNull.Rooms.location}")
+	private String location;
+
 
 	@Column
 	@NotNull(message = "{NotNull.Rooms.serviceApartmentId}")
 	private int serviceApartmentId;
-
+	
+	@Column
+	@NotNull(message = "{NotNull.Rooms.serviceApartment}")
+	private String serviceApartment;
 
 	@Column
 	@NotNull(message = "{NotNull.Rooms.address}")
