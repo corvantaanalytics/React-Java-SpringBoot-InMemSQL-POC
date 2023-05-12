@@ -14,5 +14,6 @@ public interface ServiceApartmentsRepository extends JpaRepository<ServiceApartm
 		QuerydslPredicateExecutor<ServiceApartments> {
 
 	List<ServiceApartments> findByLocationId(int location_Id);
+	ServiceApartments deleteById(int id);
 	
 }

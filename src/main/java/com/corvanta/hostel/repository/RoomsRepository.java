@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
+import com.corvanta.hostel.entity.Hosteller;
 import com.corvanta.hostel.entity.Rooms;
 
 @RepositoryRestResource()
@@ -14,5 +15,6 @@ public interface RoomsRepository extends JpaRepository<Rooms, Integer>, JpaSpeci
 		QuerydslPredicateExecutor<Rooms> {
 
 	List<Rooms> findByLocationIdAndServiceApartmentId(int locationId,int serviceApartmentId);
+	Rooms deleteById(int id);
 
 }

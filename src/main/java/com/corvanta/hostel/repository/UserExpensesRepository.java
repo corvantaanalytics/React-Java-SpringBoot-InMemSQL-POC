@@ -17,7 +17,6 @@ public interface UserExpensesRepository extends JpaRepository<UserExpenses, Inte
 	
 	List<UserExpenses> findByLocationId(int locationId);
 	List<UserExpenses> findByServiceApartmentId(int serviceApartmentId);
-	List<UserExpenses> findByRoomId(int roomId);
-	List<UserExpenses> findByExpenseId(int expenseId);
+	List<UserExpenses> findByExpenseTypeId(int expenseId);
 }
 

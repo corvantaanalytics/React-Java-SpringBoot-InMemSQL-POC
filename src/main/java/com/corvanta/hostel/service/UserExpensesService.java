@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
+import com.corvanta.hostel.entity.Hosteller;
 import com.corvanta.hostel.entity.UserExpenses;
 import com.corvanta.hostel.repository.UserExpensesRepository;
 
@@ -15,9 +16,12 @@ public class UserExpensesService {
 	public UserExpensesService(UserExpensesRepository userExpensesRepository) {
 		this.userExpensesRepository = userExpensesRepository;
 	}
+	
+	public List<UserExpenses> getUserExpenses() {
+		return userExpensesRepository.findAll();
+	}
 
 	public UserExpenses saveUserExpenses(UserExpenses userExpenses) {
-		userExpenses.setDate(java.time.LocalDate.now());
 		return userExpensesRepository.save(userExpenses);
 	}
 
@@ -31,14 +35,9 @@ public class UserExpensesService {
 		return userExpensesRepository.findByServiceApartmentId(serviceApartmentId);
 	}
 
-	public List<UserExpenses> getUserExpensesByRoomId(int roomId) {
+	public List<UserExpenses> getUserExpensesByExpenseId(int expenseTypeId) {
 
-		return userExpensesRepository.findByRoomId(roomId);
-	}
-
-	public List<UserExpenses> getUserExpensesByExpenseId(int expenseId) {
-
-		return userExpensesRepository.findByExpenseId(expenseId);
+		return userExpensesRepository.findByExpenseTypeId(expenseTypeId);
 	}
 
 }
