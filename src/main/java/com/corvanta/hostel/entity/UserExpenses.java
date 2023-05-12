@@ -22,20 +22,27 @@ public class UserExpenses {
 	@Column
 	@NotNull(message = "{NotNull.UserExpenses.locationId}")
 	private int locationId;
+	
+	@Column
+	@NotNull(message = "{NotNull.UserExpenses.location}")
+	private String location;
 
 	@Column
 	@NotNull(message = "{NotNull.UserExpenses.serviceApartmentId}")
 	private int serviceApartmentId;
-
-
+	
 	@Column
-	@NotNull(message = "{NotNull.UserExpenses.address}")
-	private int roomId;
+	@NotNull(message = "{NotNull.UserExpenses.locationId}")
+	private String serviceApartment;
 
 	
 	@Column
 	@NotNull(message = "{NotNull.UserExpenses.roomtypes}")
-	private int expenseId;
+	private int expenseTypeId;
+	
+	@Column
+	@NotNull(message = "{NotNull.UserExpenses.locationId}")
+	private String expenseType;
 
 	@Column
 	@NotNull(message = "{NotNull.UserExpenses.rent}")

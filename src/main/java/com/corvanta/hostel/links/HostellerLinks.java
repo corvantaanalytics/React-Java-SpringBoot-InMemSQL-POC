@@ -10,6 +10,9 @@ public class HostellerLinks {
 	public static final String GET_HOSTELLER = "/hosteller/{id}";
 	public static final String UPDATE_HOSTELLER = "/hosteller/{id}";
 	public static final String DELETE_HOSTELLER = "/hosteller/delete/{id}";
+	public static final String GET_HOSTELLERSBYLOCATION = "/hosteller/location/{locationId}";
+	public static final String GET_HOSTELLERBYAPARTMENTS = "/hosteller/apartment/{serviceApartmentId}";
+	public static final String GET_HOSTELLERBYLOCATIONANDAPARTMENTS = "/hosteller/{locationId}/{serviceApartmentId}";
 	public static final String LIST_ROOMDETAILS = "/roomDetails";
 	public static final String ADD_ROOMDETAILS = "/roomDetail";
 	public static final String GET_ROOMDETAILS = "/roomDetail/{id}";
@@ -49,7 +52,8 @@ public class HostellerLinks {
 	public static final String GET_EXPENSETYPE = "/expenseType/{id}";
 	public static final String UPDATE_EXPENSETYPE = "/expenseType/{id}";
 	public static final String DELETE_EXPENSETYPE = "/expenseType/delete/{id}";
-	public static final String ADD_USEREXPENSE = "/userExpenses";
+	public static final String ADD_USEREXPENSE = "/userExpense";
+	public static final String GET_USEREXPENSES = "/userExpenses";
 	public static final String GET_USEREXPENSEBYLOCATION = "/userExpenses/location/{locationId}";
 	public static final String GET_USEREXPENSEBYAPARTMENT = "/userExpenses/serviceApartment/{serviceApartmentId}";
 	public static final String GET_USEREXPENSEBYROOM = "/userExpenses/room/{roomId}";

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.corvanta.hostel.entity.Hosteller;
 import com.corvanta.hostel.entity.UserExpenses;
 import com.corvanta.hostel.links.HostellerLinks;
 import com.corvanta.hostel.service.UserExpensesService;
@@ -24,6 +25,14 @@ public class UserExpensesController {
 
 	@Autowired
 	UserExpensesService userExpensesService;
+	
+	@GetMapping(path = HostellerLinks.GET_USEREXPENSES)
+	public ResponseEntity<?> listUserExpenses() {
+		log.info("UserExpensesController:  list UserExpenses");
+		List<UserExpenses> resource = userExpensesService.getUserExpenses();
+		return ResponseEntity.ok(resource);
+	}
+
 
 	@PostMapping(path = HostellerLinks.ADD_USEREXPENSE)
 	public ResponseEntity<?> saveUserExpense(@RequestBody UserExpenses userExpenses) {
@@ -31,6 +40,7 @@ public class UserExpensesController {
 		UserExpenses resource = userExpensesService.saveUserExpenses(userExpenses);
 		return ResponseEntity.ok(resource);
 	}
+	
 
 	@GetMapping(path = HostellerLinks.GET_USEREXPENSEBYLOCATION)
 	public ResponseEntity<?> getUserExpenseByLocation(@PathVariable("locationId") int locationId) {
@@ -41,22 +51,15 @@ public class UserExpensesController {
 	
 	@GetMapping(path = HostellerLinks.GET_USEREXPENSEBYAPARTMENT)
 	public ResponseEntity<?> getUserExpenseByApartment(@PathVariable("serviceApartmentId") int serviceApartmentId) {
-		log.info("LocationController:  getUserExpenseByLocationId :: " + serviceApartmentId);
+		log.info("UserExpensesController:  getUserExpenseByLocationId :: " + serviceApartmentId);
 		List<UserExpenses> resource = userExpensesService.getUserExpensesByApartmentId(serviceApartmentId);
 		return ResponseEntity.ok(resource);
 	}
 	
-	@GetMapping(path = HostellerLinks.GET_USEREXPENSEBYROOM)
-	public ResponseEntity<?> getUserExpenseByRoom(@PathVariable("roomId") int roomId) {
-		log.info("LocationController:  getUserExpenseByLocationId :: " + roomId);
-		List<UserExpenses> resource = userExpensesService.getUserExpensesByRoomId(roomId);
-		return ResponseEntity.ok(resource);
-	}
-	
 	@GetMapping(path = HostellerLinks.GET_USEREXPENSEBYEXPENSE)
-	public ResponseEntity<?> getUserExpenseByExpense(@PathVariable("expenseId") int expenseId) {
-		log.info("LocationController:  getUserExpenseByLocationId :: " + expenseId);
-		List<UserExpenses> resource = userExpensesService.getUserExpensesByExpenseId(expenseId);
+	public ResponseEntity<?> getUserExpenseByExpense(@PathVariable("expenseId") int expenseTypeId) {
+		log.info("UserExpensesController:  getUserExpenseByLocationId :: " + expenseTypeId);
+		List<UserExpenses> resource = userExpensesService.getUserExpensesByExpenseId(expenseTypeId);
 		return ResponseEntity.ok(resource);
 	}
 

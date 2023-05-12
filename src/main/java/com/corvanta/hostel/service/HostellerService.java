@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 
 import com.corvanta.hostel.entity.Hosteller;
+import com.corvanta.hostel.entity.Rooms;
+import com.corvanta.hostel.entity.UserExpenses;
 import com.corvanta.hostel.repository.HostellerRepository;
 
 @Component
@@ -26,6 +28,21 @@ public class HostellerService {
 
 	public Hosteller getHosteller(int hostellerId) {
 		return hostellerRepository.findById(hostellerId).get();
+	}
+	
+
+	public List<Hosteller> getHostellerByLocationAndApartmentId(int locationId,int serviceApartmentId) {
+		return hostellerRepository.findByLocationIdAndServiceApartmentId(locationId,serviceApartmentId);
+	}
+	
+	public List<Hosteller> getHostellerByLocationId(int locationId) {
+
+		return hostellerRepository.findByLocationId(locationId);
+	}
+
+	public List<Hosteller> getHostellerByApartmentId(int serviceApartmentId) {
+
+		return hostellerRepository.findByServiceApartmentId(serviceApartmentId);
 	}
 
 	public Hosteller updateHosteller(int hostellerId, Hosteller hosteller) {

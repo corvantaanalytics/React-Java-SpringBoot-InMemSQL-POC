@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.corvanta.hostel.entity.Hosteller;
+import com.corvanta.hostel.entity.Rooms;
+import com.corvanta.hostel.entity.UserExpenses;
 import com.corvanta.hostel.links.HostellerLinks;
 import com.corvanta.hostel.service.HostellerService;
 
@@ -48,6 +50,28 @@ public class HostellerController {
 		return ResponseEntity.ok(resource);
 	}
 
+	@GetMapping(path = HostellerLinks.GET_HOSTELLERBYLOCATIONANDAPARTMENTS)
+	public ResponseEntity<?> getHostellerByFilters(@PathVariable("locationId") int locationId, @PathVariable("serviceApartmentId") int serviceApartmentId ) {
+		log.info("HostellerController:  getHostellers :: " + locationId,serviceApartmentId);
+		List<Hosteller> resource = hostellersService.getHostellerByLocationAndApartmentId(locationId,serviceApartmentId);
+		return ResponseEntity.ok(resource);
+	}
+	
+	@GetMapping(path = HostellerLinks.GET_HOSTELLERSBYLOCATION)
+	public ResponseEntity<?> getHostellerByLocation(@PathVariable("locationId") int locationId) {
+		log.info("HostellerController:  getHostellers :: " + locationId);
+		List<Hosteller> resource = hostellersService.getHostellerByLocationId(locationId);
+		return ResponseEntity.ok(resource);
+	}
+	
+	@GetMapping(path = HostellerLinks.GET_HOSTELLERBYAPARTMENTS)
+	public ResponseEntity<?> getHostellerByApartment(@PathVariable("serviceApartmentId") int serviceApartmentId) {
+		log.info("HostellerController:  getHostellers :: " + serviceApartmentId);
+		List<Hosteller> resource = hostellersService.getHostellerByApartmentId(serviceApartmentId);
+		return ResponseEntity.ok(resource);
+	}
+	
+	
 	@PutMapping(path = HostellerLinks.UPDATE_HOSTELLER)
 	public ResponseEntity<?> updateHosteller(@PathVariable("id") int hostellerId,
 			@RequestBody Hosteller hostellerDetails) {
