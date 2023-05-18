@@ -8,4 +8,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import com.corvanta.users.entity.Users;
 
 @RepositoryRestResource()
-public interface UsersRepository extends JpaRepository<Users, Integer>, JpaSpecificationExecutor<Users>, QuerydslPredicateExecutor<Users> {}
+public interface UsersRepository extends JpaRepository<Users, Integer>, JpaSpecificationExecutor<Users>, QuerydslPredicateExecutor<Users> {
+	
+	Users findByUsername(String username);
+}

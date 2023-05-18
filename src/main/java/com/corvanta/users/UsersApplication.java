@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
-@ComponentScan({"com.corvanta.users","com.corvanta.hostel"})
+@ComponentScan({"com.corvanta.users","com.corvanta.hostel","com.corvanta.config"})
 public class UsersApplication {
 
 	public static void main(String[] args) {
