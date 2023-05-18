@@ -21,18 +21,6 @@ public class ExpenseType {
 	@Column
 	@NotNull(message = "{NotNull.ExpenseType.expenseType}")
 	private String expenseType;
-//
-//	@Column
-//	@NotNull(message = "{NotNull.ExpenseType.food}")
-//	private String food;
-//
-//	@Column
-//	@NotNull(message = "{NotNull.ExpenseType.electricity}")
-//	private String electricity;
-//	
-//
-//	@Column
-//	@NotNull(message = "{NotNull.ExpenseType.maintenance}")
-//	private String maintenance;
+
 
 }
