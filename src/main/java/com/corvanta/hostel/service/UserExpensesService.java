@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 
 import com.corvanta.hostel.entity.Hosteller;
+import com.corvanta.hostel.entity.ServiceApartments;
 import com.corvanta.hostel.entity.UserExpenses;
 import com.corvanta.hostel.repository.UserExpensesRepository;
 
@@ -29,6 +30,10 @@ public class UserExpensesService {
 
 		return userExpensesRepository.findByLocationId(locationId);
 	}
+	
+	public UserExpenses getUserExpensesById(int id) {
+		return userExpensesRepository.findById(id).get();
+	}
 
 	public List<UserExpenses> getUserExpensesByApartmentId(int serviceApartmentId) {
 
@@ -38,6 +43,15 @@ public class UserExpensesService {
 	public List<UserExpenses> getUserExpensesByExpenseId(int expenseTypeId) {
 
 		return userExpensesRepository.findByExpenseTypeId(expenseTypeId);
+	}
+	
+	public UserExpenses updateUserExpenses(int id, UserExpenses userExpenses) {
+		userExpenses.setId(id);
+		return userExpensesRepository.save(userExpenses);
+	}
+	
+	public UserExpenses deleteUserExpense(int id) {
+		return userExpensesRepository.deleteById(id);
 	}
 
 }
