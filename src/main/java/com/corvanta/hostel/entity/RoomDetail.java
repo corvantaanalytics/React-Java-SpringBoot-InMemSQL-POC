@@ -5,12 +5,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 import lombok.Data;
 
 @Entity
 @Data
+@Table(name = "room_detail")
 public class RoomDetail {
 
 	@Id
@@ -23,11 +25,11 @@ public class RoomDetail {
 	private String address;
 
 	@Column
-	@NotNull(message = "{NotNull.RoomDetail.housename}")
+	@NotNull(message = "{NotNull.RoomDetail.houseName}")
 	private String houseName;
 
 	@Column
-	@NotNull(message = "{NotNull.RoomDetail.roomtypes}")
+	@NotNull(message = "{NotNull.RoomDetail.roomTypes}")
 	private String roomTypes;
 
 	@Column
